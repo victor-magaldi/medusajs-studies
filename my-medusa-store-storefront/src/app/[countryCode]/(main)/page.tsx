@@ -4,6 +4,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import { RegionTypes } from "@medusajs/types"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -27,7 +28,7 @@ export default async function Home(props: {
   if (!collections || !region) {
     return null
   }
-
+  region.id = "reg_01KA4PSV69JAKB53M5PJSRRFN5"
   return (
     <>
       <Hero />

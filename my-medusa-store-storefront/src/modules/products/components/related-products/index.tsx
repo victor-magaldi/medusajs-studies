@@ -21,7 +21,8 @@ export default async function RelatedProducts({
   // edit this function to define your related products logic
   const queryParams: HttpTypes.StoreProductListParams = {}
   if (region?.id) {
-    queryParams.region_id = region.id
+    // queryParams.region_id = region.id
+    queryParams.region_id = "reg_01KA4PSV69JAKB53M5PJSRRFN5"
   }
   if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]

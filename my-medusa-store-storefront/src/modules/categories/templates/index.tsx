@@ -36,6 +36,7 @@ export default function CategoryTemplate({
 
   getParents(category)
 
+  console.log('%c🤪 ~ file: index.tsx:38 : ', 'color: #e3fe08', category);
   return (
     <div
       className="flex flex-col small:flex-row small:items-start py-6 content-container"
