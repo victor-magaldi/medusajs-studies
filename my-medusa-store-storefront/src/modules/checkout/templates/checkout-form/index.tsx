@@ -21,12 +21,16 @@ export default async function CheckoutForm({
 
   const shippingMethods = await listCartShippingMethods(cart.id)
 
-  const paymentMethods = await listCartPaymentMethods(cart.region?.id ?? "")
+  // const paymentMethods = await listCartPaymentMethods(cart.region?.id ?? "")
+  const paymentMethods = [
+    {
+      "id": "pp_system_default",
+      "is_enabled": true
+    }
+  ]
   console.log('%c🤪 ~ file: index.tsx:21 : ', 'color: #b3445c', "checkout-container", shippingMethods, paymentMethods);
 
-  if (!shippingMethods
-    // || !paymentMethods
-  ) {
+  if (!shippingMethods || !paymentMethods) {
     return null
   }
 
