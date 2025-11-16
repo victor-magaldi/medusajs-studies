@@ -41,7 +41,7 @@ export default async function CheckoutForm({
 
       <Shipping cart={cart} availableShippingMethods={shippingMethods} />
 
-      {/* <Payment cart={cart} availablePaymentMethods={paymentMethods} /> */}
+      <Payment cart={cart} availablePaymentMethods={paymentMethods} />
 
       <Review cart={cart} />
     </div>

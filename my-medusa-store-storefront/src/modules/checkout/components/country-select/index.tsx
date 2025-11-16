@@ -28,7 +28,8 @@ const CountrySelect = forwardRef<
       label: country.display_name,
     }))
   }, [region])
-
+  console.log("countryOptions", countryOptions)
+  countryOptions
   return (
     <NativeSelect
       ref={innerRef}
@@ -36,11 +37,12 @@ const CountrySelect = forwardRef<
       defaultValue={defaultValue}
       {...props}
     >
-      {countryOptions?.map(({ value, label }, index) => (
+      <option value="br">Mockado Brazil</option>
+      {[countryOptions?.map(({ value, label }, index) => (
         <option key={index} value={value}>
           {label}
         </option>
-      ))}
+      ))]}
     </NativeSelect>
   )
 })
