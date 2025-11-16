@@ -22,7 +22,7 @@ export default async function RelatedProducts({
   const queryParams: HttpTypes.StoreProductListParams = {}
   if (region?.id) {
     // queryParams.region_id = region.id
-    queryParams.region_id = "reg_01KA4S2QAA49E32WYJC3BDAD4J"
+    queryParams.region_id = "reg_01KA4S5NB4V1KA12EJTZ7Z8CX4"
   }
   if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]

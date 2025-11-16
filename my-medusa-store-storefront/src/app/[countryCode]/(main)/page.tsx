@@ -28,7 +28,7 @@ export default async function Home(props: {
   if (!collections || !region) {
     return null
   }
-  region.id = "reg_01KA4S2QAA49E32WYJC3BDAD4J"
+  region.id = "reg_01KA4S5NB4V1KA12EJTZ7Z8CX4"
   return (
     <>
       <Hero />

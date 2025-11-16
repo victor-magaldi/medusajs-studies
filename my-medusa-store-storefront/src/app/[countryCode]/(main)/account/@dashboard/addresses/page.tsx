@@ -22,7 +22,7 @@ export default async function Addresses(props: {
   if (!customer || !region) {
     notFound()
   }
-  region.id = "reg_01KA4S2QAA49E32WYJC3BDAD4J"
+  region.id = "reg_01KA4S5NB4V1KA12EJTZ7Z8CX4"
 
   return (
     <div className="w-full" data-testid="addresses-page-wrapper">
