@@ -66,21 +66,46 @@ export async function GET(
   //   },
   // })
 
-  const { data: variants } = await query.graph({
+  // const { data: products } = await query.graph({
+  //   entity: "product",
+  //   filters: {
+  //     id: "prod_01KA4PSVJ76NF6856H3ZA3T8Y2"
+  //   },
+  //   fields: [
+  //     "*",
+  //     "variants.*",
+  //     "variants.calculated_price.*",
+  //     "variants.inventory_quantity"
+  //   ],
+  //   context: {
+  //     variants: {
+  //       calculated_price: QueryContext({
+  //         region_id: "reg_01KA4S2QAA49E32WYJC3BDAD4J",
+  //         currency_code: "BRL", // adicione o currency_code também
+  //       }),
+  //     },
+  //   },
+  // })
+  const { data: products } = await query.graph({
     entity: "product",
-    filters: {
-      id: "prod_01KA4PSVJ76NF6856H3ZA3T8Y2"
-    },
     fields: [
-      "*variants.calculated_price,+variants.inventory_quantity"
+      "*",
+      "variants.*",
+      "variants.calculated_price.*",
     ],
-    context: {
-      region_id: "reg_01KA4S2QAA49E32WYJC3BDAD4J"
+    filters: {
+      id: "prod_01KA4PSVJ76NF6856H3ZA3T8Y2",
     },
-    strategy: "select-in"
+    context: {
+      variants: {
+        calculated_price: QueryContext({
+          region_id: "reg_01KA4S2QAA49E32WYJC3BDAD4J",
+          currency_code: "brl",
+        }),
+      },
+    },
   })
 
-
-  return res.json({ variants }).sendStatus(200);
+  return res.json({ products }).sendStatus(200);
 }
 
