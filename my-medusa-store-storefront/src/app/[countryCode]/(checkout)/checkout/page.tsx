@@ -19,6 +19,8 @@ export default async function Checkout() {
 
   const customer = await retrieveCustomer()
 
+  console.log('%c🤪 ~ file: page.tsx:21 : ', 'color: #b262d8', cart);
+  console.log('%c🤪 ~ file: page.tsx:21 : ', 'color: #b262d8', customer);
   return (
     <div className="grid grid-cols-1 small:grid-cols-[1fr_416px] content-container gap-x-40 py-12">
       <PaymentWrapper cart={cart}>

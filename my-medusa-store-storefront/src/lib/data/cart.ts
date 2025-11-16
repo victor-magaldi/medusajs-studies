@@ -65,7 +65,7 @@ export async function getOrSetCart(countryCode: string) {
 
   if (!cart) {
     const cartResp = await sdk.store.cart.create(
-      { region_id: "reg_01KA4PSV69JAKB53M5PJSRRFN5" },
+      { region_id: "reg_01KA4S2QAA49E32WYJC3BDAD4J" },
       {},
       headers
     )
@@ -78,7 +78,7 @@ export async function getOrSetCart(countryCode: string) {
   }
 
   if (cart && cart?.region_id !== region.id) {
-    await sdk.store.cart.update(cart.id, { region_id: "reg_01KA4PSV69JAKB53M5PJSRRFN5" }, {}, headers)
+    await sdk.store.cart.update(cart.id, { region_id: "reg_01KA4S2QAA49E32WYJC3BDAD4J" }, {}, headers)
     const cartCacheTag = await getCacheTag("carts")
     revalidateTag(cartCacheTag)
   }
