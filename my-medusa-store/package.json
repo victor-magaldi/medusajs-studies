@@ -25,7 +25,9 @@
     "@medusajs/admin-sdk": "2.11.3",
     "@medusajs/cli": "2.11.3",
     "@medusajs/framework": "2.11.3",
-    "@medusajs/medusa": "2.11.3"
+    "@medusajs/medusa": "2.11.3",
+    "@rsc-labs/medusa-wishlist": "^0.0.6",
+    "medusa-plugin-wishlist": "^1.1.44"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.11.3",

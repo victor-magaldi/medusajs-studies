@@ -3,6 +3,14 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
+  plugins: [
+    {
+      resolve: "@rsc-labs/medusa-wishlist",
+      options: {
+        jwtSecret: process.env.JWT_SECRET || "supersecret"
+      }
+    }
+  ],
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
